@@ -40,9 +40,8 @@ class MyPluginTest : BasePlatformTestCase() {
         checkList.add("email: john.doe@example.com")
         checkList.add("operationId: findInvoiceById")
         checkList.add("operationId: getInvoiceList")
-        var ok = false
         var lines = checkList.stream()
-        ok = lines.allMatch { l -> allLines.contains(l) }
+        var ok = lines.allMatch { l -> allLines.contains(l) }
         assertTrue(ok)
     }
 
