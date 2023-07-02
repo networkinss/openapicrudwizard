@@ -1,0 +1,27 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>ch.inss.openapi.crudwizard</id>
+    <name>OpenAPI CRUD Wizard</name>
+    <vendor email="info@inss.ch" url="https://inss.ch">inssch</vendor>
+    <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.plugins.yaml</depends>
+    <description>
+        <![CDATA[
+        inss.ch. Creates OpenAPI OAS3 specifications including all CRUD methods from a Yaml object.
+    ]]>
+    </description>
+    <product-descriptor code="POPENAPICRUDWIZ" release-date="20230702" release-version="20232"/>
+    <version>2023.1.1</version>
+    <resource-bundle>messages.BasicActionsBundle</resource-bundle>
+    <actions>
+        <action id="ch.inss.openapi.crudwizard.action.PopupDialogAction"
+                class="ch.inss.openapi.crudwizard.action.PopupDialogAction"
+                text="Action Basics Plugin: Create OpenAPI CRUD" description="Create OpenAPI CRUD methods."
+                icon="ch.inss.openapi.crudwizard.icons.SdkIcons.Sdk_default_icon">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+            <override-text place="MainMenu" text="OpenAPI CRUD Wizard"/>
+            <keyboard-shortcut first-keystroke="control alt 3" keymap="$default"/>
+            <mouse-shortcut keystroke="control button3 doubleClick" keymap="$default"/>
+        </action>
+    </actions>
+</idea-plugin>
