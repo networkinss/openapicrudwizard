@@ -10,7 +10,7 @@
         inss.ch. Creates OpenAPI OAS3 specifications including all CRUD methods from a Yaml object.
     ]]>
     </description>
-    <product-descriptor code="POPENAPICRUDWIZ" release-date="20230702" release-version="20232"/>
+    <product-descriptor code="POPENAPICRUDWIZ" release-date="20220908" release-version="20221" optional="true"/>
     <version>2023.1.1</version>
     <resource-bundle>messages.BasicActionsBundle</resource-bundle>
     <actions>
