@@ -1,6 +1,7 @@
 package ch.inss.openapi.crudwizard.action
 
 //import ch.inss.openapi.crudwizard.CheckLicense
+import ch.inss.openapi.crudwizard.CheckLicense
 import ch.inss.openapi.crudwizard.OutputWraper
 import ch.inss.openapi.crudwizard.Util
 import ch.inss.openapi.crudwizard.yaml.YamlPsiElementFactory
@@ -60,7 +61,7 @@ class PopupDialogAction : AnAction {
         var dlgMsg = "An internal error occurred."
         var dlgTitle = messageTitle
         /*License issues */
-        val isLicensed = true //CheckLicense.isLicensed()
+        val isLicensed = CheckLicense.isLicensed()
 
         var isFromText = false
         /* Case a file is selected. */
@@ -74,8 +75,8 @@ class PopupDialogAction : AnAction {
                 if (isLicensed) {
                     isFromText = false
                 } else {
-//                    Util.showError("You need a license to process Excel files.")
-//                    CheckLicense.requestLicense("You need a license to generate OpenAPI documents.")
+                    Util.showError("You need a license to process Excel files.")
+                    CheckLicense.requestLicense("You need a license to generate OpenAPI documents.")
                     return
                 }
             } else {
