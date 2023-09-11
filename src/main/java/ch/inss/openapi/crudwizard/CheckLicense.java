@@ -129,7 +129,7 @@ public class CheckLicense {
 
     public static void requestLicense(final String message) {
         // ensure the dialog is appeared from UI thread and in a non-modal context
-        ApplicationManager.getApplication().invokeLater(() -> showRegisterDialog("PMAKECOFFEE", message), ModalityState.NON_MODAL);
+        ApplicationManager.getApplication().invokeLater(() -> showRegisterDialog("PMAKECOFFEE", message), ModalityState.defaultModalityState());
     }
 
     private static void showRegisterDialog(final String productCode, final String message) {

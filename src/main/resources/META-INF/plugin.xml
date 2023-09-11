@@ -10,8 +10,8 @@
         inss.ch. Creates OpenAPI OAS3 specifications including all CRUD methods from a Yaml object.
     ]]>
     </description>
-    <product-descriptor code="POPENAPICRUDWIZ" release-date="20230702" release-version="20232"/>
-    <version>2023.1.1</version>
+    <product-descriptor code="POPENAPICRUDWIZ" release-date="20230702" release-version="20231" optional="true"/>
+    <version>2023.1.2</version>
     <resource-bundle>messages.BasicActionsBundle</resource-bundle>
     <actions>
         <action id="ch.inss.openapi.crudwizard.action.PopupDialogAction"
